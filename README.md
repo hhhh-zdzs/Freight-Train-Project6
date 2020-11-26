@@ -4,8 +4,8 @@
 The project 6
 ## Installation
 Clone the repo and run the following command in the repo dir
--bundle install
--rails server / rails s
+- bundle install
+- rails server / rails s
 
 ## Project Structure
 There will be three main pages: LoginPage, Student's Home Page, Teacher's Home Page
