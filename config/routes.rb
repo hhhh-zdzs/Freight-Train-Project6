@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :evaluations
   resources :teams
   resources :students
   get 'home_page/index'
