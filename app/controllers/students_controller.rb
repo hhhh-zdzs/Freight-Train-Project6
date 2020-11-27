@@ -15,10 +15,12 @@ class StudentsController < ApplicationController
   # GET /students/new
   def new
     @student = Student.new
+    @groups = Group.all
   end
 
   # GET /students/1/edit
   def edit
+    @groups = Group.all
   end
 
   # POST /students
