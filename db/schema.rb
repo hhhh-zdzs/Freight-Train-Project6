@@ -10,11 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_27_150114) do
+ActiveRecord::Schema.define(version: 2020_11_27_180036) do
 
   create_table "evaluations", force: :cascade do |t|
     t.integer "score"
     t.string "comment"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "groups", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -25,6 +31,9 @@ ActiveRecord::Schema.define(version: 2020_11_27_150114) do
     t.string "dotNum"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "group_id", null: false
+    t.index ["group_id"], name: "index_students_on_group_id"
   end
 
+  add_foreign_key "students", "groups"
 end
