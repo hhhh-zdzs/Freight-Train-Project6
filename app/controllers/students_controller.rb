@@ -15,8 +15,16 @@ class StudentsController < ApplicationController
   end
 
   # GET /students/:id/:idL
-  def addC
+  def evaluatePage
+      @student = Student.find(params[:id])
       @studentL = Student.find(params[:idL])
+      if # it is a get with parameters like http://127.0.0.1:3000/students/1/2?student_score=999&student_comment=QQQ
+        # then update the @studentL's score and comment
+        # @studentL.score = params[:student_score]
+        # @studentL.common = @studentL.common.to_s + @student.fname.to_s + params[:student_score]
+      else
+        # just show the empty from
+      end
   end
 
   # GET /students/new
@@ -59,6 +67,10 @@ class StudentsController < ApplicationController
       end
     end
   end
+
+  # def updateReview
+  #   puts 'OOOOKKKKK!'
+  # end
 
   # DELETE /students/1
   # DELETE /students/1.json
