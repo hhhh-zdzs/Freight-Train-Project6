@@ -10,6 +10,13 @@ class StudentsController < ApplicationController
   # GET /students/1
   # GET /students/1.json
   def show
+  	@students = Student.all
+    @current_path = '/students/'+params[:id];
+  end
+
+  # GET /students/:id/:idL
+  def addC
+      @studentL = Student.find(params[:idL])
   end
 
   # GET /students/new
@@ -73,4 +80,5 @@ class StudentsController < ApplicationController
     def student_params
       params.require(:student).permit(:fname, :lname, :dotNum, :group_id)
     end
+
 end

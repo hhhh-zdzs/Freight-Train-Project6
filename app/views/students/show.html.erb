@@ -20,6 +20,32 @@
   <%= @student.group.name %>
 </p>
 
+<p>
+	<table>
+  <thead>
+    <tr>
+      <th>Fname</th>
+      <th>Lname</th>
+      <th>Dotnum</th>
+      <th>Group</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= student.fname %></td>
+        <td><%= student.lname %></td>
+        <td><%= student.dotNum %></td>
+        <td><%= student.group.name %></td>
+        <td><%= link_to 'Evaluate', @current_path.to_s+'/'+student.id.to_s %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Back', students_path %>
