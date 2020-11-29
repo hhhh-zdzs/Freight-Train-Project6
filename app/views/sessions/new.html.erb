@@ -1,0 +1,14 @@
+<% provide(:title, "student login in") %>
+<h1>Log in</h1>
+<p>Enter your osu dot number</p> 
+<div class="row">
+    <%= form_with(url: login_path, scope: :session, local: true) do |f|%>
+      
+        <%= f.label :dotNum %>
+        <%= f.text_field :dotNum %>
+
+        <%= f.submit "Log in"%>
+    <% end %>
+    
+</div>
+<%= link_to 'Create Student', new_student_path %>
