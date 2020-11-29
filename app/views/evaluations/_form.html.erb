@@ -21,15 +21,9 @@
     <%= form.text_field :comment %>
   </div>
 
-  <div class="field">
-    <%= form.label :aboutStudent_id %>
-    <%= form.text_field :aboutStudent_id %>
-  </div>
+  <%=form.hidden_field :authorId, :value => @authorId%>
+  <%=form.hidden_field :studentId, :value => @studentId%>
 
-  <div class="field">
-    <%= form.label :submittedStudent_id %>
-    <%= form.text_field :submittedStudent_id %>
-  </div>
 
   <div class="actions">
     <%= form.submit %>

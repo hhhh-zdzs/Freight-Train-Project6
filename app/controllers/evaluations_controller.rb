@@ -15,6 +15,8 @@ class EvaluationsController < ApplicationController
   # GET /evaluations/new
   def new
     @evaluation = Evaluation.new
+    @authorId = params[:authorId]
+    @studentId = params[:studentId]
   end
 
   # GET /evaluations/1/edit
@@ -69,6 +71,6 @@ class EvaluationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def evaluation_params
-      params.require(:evaluation).permit(:score, :comment, :aboutStudent_id, :submittedStudent_id)
+      params.require(:evaluation).permit(:score, :comment, :authorId, :studentId)
     end
 end

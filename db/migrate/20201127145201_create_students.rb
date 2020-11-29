@@ -4,6 +4,7 @@ class CreateStudents < ActiveRecord::Migration[6.0]
       t.string :fname
       t.string :lname
       t.string :dotNum
+      t.integer :studentId
 
       t.timestamps
     end

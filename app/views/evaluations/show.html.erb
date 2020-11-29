@@ -10,7 +10,15 @@
   <%= @evaluation.comment %>
 </p>
 
+<p>
+  <strong>AuthorId:</strong>
+  <%= @evaluation.authorId %>
+</p>
 
+<p>
+  <strong>StudentId:</strong>
+  <%= @evaluation.studentId %>
+</p>
 
 <%= link_to 'Edit', edit_evaluation_path(@evaluation) %> |
 <%= link_to 'Back', evaluations_path %>

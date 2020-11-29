@@ -28,6 +28,7 @@
       <th>Lname</th>
       <th>Dotnum</th>
       <th>Group</th>
+      <th>StudentID</th>
       <th colspan="4"></th>
     </tr>
   </thead>
@@ -39,7 +40,8 @@
         <td><%= student.lname %></td>
         <td><%= student.dotNum %></td>
         <td><%= student.group.name %></td>
-        <td><%= link_to 'Evaluate', @current_path.to_s+'/'+student.id.to_s %></td>
+        <td><%= student.studentId%></td>
+        <td><%= link_to 'Evaluate', new_evaluation_path(authorId:@student.studentId, studentId:student.studentId) %></td>
 
       </tr>
     <% end %>
