@@ -33,7 +33,7 @@
   </thead>
 
   <tbody>
-    <% @students.each do |student| %>
+    <% @students.select{|s| s.group.name == @student.group.name}.each do |student|%>
       <tr>
         <td><%= student.fname %></td>
         <td><%= student.lname %></td>
