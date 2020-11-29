@@ -32,6 +32,8 @@
     <%#= form.number_field :group_id%>
   </div>
 
+  <%= form.hidden_field :studentId, :value => @students.length%>
+
   <div class="actions">
     <%= form.submit %>
   </div>
