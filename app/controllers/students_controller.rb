@@ -25,6 +25,7 @@ class StudentsController < ApplicationController
 
   # GET /students/1/edit
   def edit
+    @students = Student.all
     @groups = Group.all
   end
 
