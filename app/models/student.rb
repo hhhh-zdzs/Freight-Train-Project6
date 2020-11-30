@@ -1,4 +1,4 @@
 class Student < ApplicationRecord
 	belongs_to :group
-	has_many :evaluations, dependent: :destroy
+	has_many :evaluations
 end
