@@ -34,7 +34,7 @@
   </thead>
 
   <tbody>
-    <% @students.select{|s| s.group.name == @student.group.name}.each do |student|%>
+    <% @students.select{|s| s.group.name == @student.group.name && s.studentId != @student.studentId}.each do |student|%>
       <tr>
         <td><%= student.fname %></td>
         <td><%= student.lname %></td>
@@ -49,5 +49,4 @@
 </table>
 </p>
 
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+
