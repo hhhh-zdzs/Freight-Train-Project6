@@ -32,7 +32,7 @@
     <%#= form.number_field :group_id%>
   </div>
 
-  <%= form.hidden_field :studentId, :value => @students.length%>
+  <%= form.hidden_field :studentId, :value => (@student.studentId ? @student.studentId : @students.length)%>
 
   <div class="actions">
     <%= form.submit %>
