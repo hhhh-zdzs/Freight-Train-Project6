@@ -8,7 +8,8 @@ class SessionsController < ApplicationController
         log_in student
         redirect_to student
       else
-        # not sure how to create this error login meesage
+        #how to create an error message here??
+        flash[:error] = "Invalid student osu dot number"
         render 'new'
       end
   end
