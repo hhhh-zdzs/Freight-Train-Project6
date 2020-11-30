@@ -1,16 +1,16 @@
 <% provide(:title, "student login in") %>
 <h1>Log in</h1>
-<p>Enter your osu dot number</p> 
+<p>Enter your name.#</p> 
 <div class="row">
     <%= form_with(url: login_path, scope: :session, local: true) do |f|%>
       
-        <%= f.label :dotNum %>
+        <%= f.label "Name" %>
+        <%= f.text_field :lname, class: 'form-control'%>
+        <%= f.label "Number"%>
         <%= f.text_field :dotNum, class: 'form-control'%>
-
         <%= f.submit "Log in", class: "btn btn-primary"%>
     <% end %>
     <% if flash[:error]%>
         <p> <%= flash[:error]%> </p>
     <%end%>
 </div>
-<%= link_to 'Create Student', new_student_path %>
