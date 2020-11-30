@@ -6,6 +6,7 @@ class StudentsController < ApplicationController
   def index
     @students = Student.all
     @groups = Group.all
+    @evaluations = Evaluation.all
 
   end
 
