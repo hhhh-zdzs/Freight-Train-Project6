@@ -31,7 +31,6 @@
       <th>Last Name</th>
       <th>Dot Number</th>
       <th>Group Name</th>
-      <th>StudentID</th>
       <th colspan="4"></th>
     </tr>
   </thead>
@@ -43,7 +42,6 @@
         <td><%= student.lname %></td>
         <td><%= student.dotNum %></td>
         <td><%= student.group.name %></td>
-        <td><%= student.studentId%></td>
         <td><%= link_to 'Evaluate', new_evaluation_path(authorId:@student.studentId, studentId:student.studentId) %></td>
 
       </tr>
