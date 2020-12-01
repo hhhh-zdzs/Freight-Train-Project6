@@ -12,4 +12,4 @@
 
 
 <%= link_to 'Edit', edit_evaluation_path(@evaluation), :id => "links" %> |
-<%= link_to 'Back' , "/students/#{@evaluation.authorId+1}", :id => "links" %>
+<%= link_to 'Back' , "/students/#{@evaluation.authorId.to_i+1}", :id => "links" %>

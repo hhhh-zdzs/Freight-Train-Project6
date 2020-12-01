@@ -5,7 +5,7 @@ class CreateStudents < ActiveRecord::Migration[6.0]
       t.string :lname
       t.string :dotNum
       t.integer :studentId
-
+      validates :lname, uniqueness: {scope: :dotNum}
       t.timestamps
     end
   end
