@@ -3,6 +3,7 @@ The project 6
 ## Installation
 Clone the repo and run the following command in the repo dir
 - bundle install
+- rails db:migrate
 - rails server
 
 ## Project Structure
