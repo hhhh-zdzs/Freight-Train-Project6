@@ -11,6 +11,7 @@
         <%= link_to 'Edit', edit_student_path(student) %>
         <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %>
         <br>
+        <p>Evaluations for <%= student.fname %>:</p>
         <%@evaluations.filter{|eval| eval.studentId == student.studentId}.each do |eval|%>
         <%=eval.score%> <%=eval.comment%>
         <br>
@@ -25,8 +26,8 @@
 <br>
 
 <%if @groups.length > 0%>
-  <%= link_to 'New Student', new_student_path %>
+  <%= link_to 'New Student', new_student_path, :id => "links" %>
 <%else%>
   <h2> First, create at least one team. </h2>
-<%end%>
-<%= link_to 'New Group', new_group_path %>
+<%end%> |
+<%= link_to 'New Group', new_group_path, :id => "links" %>
