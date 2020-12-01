@@ -29,7 +29,6 @@
   <div class="field">
     <%= form.label :group_id, :group%>
     <%= form.collection_select :group_id, @groups, :id, :name %>
-    <%#= form.number_field :group_id%>
   </div>
 
   <%= form.hidden_field :studentId, :value => (@student.studentId ? @student.studentId : @students.length)%>
