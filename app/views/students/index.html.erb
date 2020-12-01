@@ -8,8 +8,8 @@
     <% @students.select{|student| student.group_id == group.id}.each do |student| %>
         <%= student.fname %>
         <%= student.lname %>.<%= student.dotNum %>
-        <%= link_to 'Edit', edit_student_path(student) %>
-        <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Edit', edit_student_path(student), :id => "links" %> |
+        <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } , :id => "links"%>
         <br>
         <p>Evaluations for <%= student.fname %>:</p>
         <%@evaluations.filter{|eval| eval.studentId == student.studentId}.each do |eval|%>
